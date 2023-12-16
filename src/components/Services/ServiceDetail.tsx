@@ -97,7 +97,7 @@ function ServiceDetail() {
             transition={{ duration: 0.5 }}
             className=" col-span-12 lg:col-span-5  h-full flex items-center order-1 lg:order-2"
           >
-            <img src={`/service${id}.png`} className=" h-full object-cover " />
+            <img src={`/service${id}.webp`} className=" h-full object-cover " />
           </motion.div>
         </div>
       </div>

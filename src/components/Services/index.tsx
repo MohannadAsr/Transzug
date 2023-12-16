@@ -30,7 +30,7 @@ function Services() {
               >
                 <div className=" overflow-hidden  ">
                   <img
-                    src={`/service${index + 1}.png`}
+                    src={`/service${index + 1}.webp`}
                     className=" object-fit rounded-sm cursor-pointer hover:scale-110 hover:rotate-3 custom-trans "
                     style={{ maxHeight: '200px' }}
                     onClick={() => navigate(`/services/${index + 1}`)}

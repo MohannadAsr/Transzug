@@ -53,7 +53,7 @@ function Portfolio() {
               >
                 <Icon icon={close} fontSize={30} />
               </div>
-              <img src={`/portfolio${id}.png`} className=" mx-auto cover" />
+              <img src={`/portfolio${id}.webp`} className=" mx-auto cover" />
             </div>
             <Icon
               icon={arrowRight}
@@ -98,7 +98,7 @@ function Portfolio() {
                 >
                   <div className=" overflow-hidden">
                     <img
-                      src={`/portfolio${index + 1}.png`}
+                      src={`/portfolio${index + 1}.webp`}
                       className=" object-fit rounded-sm hover:scale-125  cursor-pointer custom-trans"
                       onClick={() => {
                         setDialog(true);
