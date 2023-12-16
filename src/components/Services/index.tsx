@@ -24,7 +24,10 @@ function Services() {
         <div className=" grid grid-cols-2 md:grid-cols-3  gap-6 lg:gap-12 my-9 px-2">
           {Array.from({ length: 6 }).map((_item, index) => {
             return (
-              <div className=" bg-secondary rounded-md p-2 md:p-5" key={index}>
+              <div
+                className=" bg-secondary rounded-md p-2 md:p-5 overflow-hidden"
+                key={index}
+              >
                 <div className=" overflow-hidden  ">
                   <img
                     src={`/service${index + 1}.png`}
