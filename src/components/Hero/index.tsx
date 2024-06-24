@@ -20,27 +20,6 @@ function Hero() {
           für Umzug & Wohnungsauflösung
         </h2>
       </motion.div>
-      <motion.div
-        initial={{ y: 60 }}
-        whileInView={{ y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className=" text-sm md:text-base absolute md:w-3/4 w-full flex-wrap rounded-t-lg p-4 bg-primary/80 text-white  bottom-0 m-auto flex items-center justify-center gap-5"
-      >
-        <h4>
-          the website use cookies to ensure important security and visitor
-          functions.
-          <a className=" font-bold underline cursor-pointer">Learn more</a>
-        </h4>
-        <div className=" flex gap-3 items-center">
-          <button className=" bg-dark px-5 py-2 rounded-md">
-            Accept cookies
-          </button>
-          <button className=" bg-transparent border-2 border-white px-5 py-2 rounded-md">
-            Reject cookies
-          </button>
-        </div>
-      </motion.div>
     </div>
   );
 }

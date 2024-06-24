@@ -4,9 +4,11 @@ import arrowRight from '@iconify-icons/mdi/arrow-right-bold-box';
 import close from '@iconify-icons/mdi/close';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function Portfolio() {
   const [id, setId] = React.useState<number>(1);
+  const { t } = useTranslation();
   const [dialog, setDialog] = React.useState<boolean>(false);
 
   const goTo = (dir: 'next' | 'prev') => {
@@ -85,7 +87,7 @@ function Portfolio() {
         )}
         <div className=" container">
           <h1 className=" text-center text-primary font-bold text-2xl md:text-3xl italic">
-            Our Portfolio
+            {t('Portfolio')}
           </h1>
           <div className=" grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-5 my-10 px-3">
             {Array.from({ length: 8 }).map((_item, index) => {

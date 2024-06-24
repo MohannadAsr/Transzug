@@ -1,9 +1,20 @@
 {
   "translation": {
-    "Home": "Zuhause",
+    "Home": "Startseite",
     "Services": "Dienstleistungen",
-    "Portfolio": "Portfolio",
+    "Portfolio": "Galieri",
     "AboutUs": "Über uns",
-    "ContactUs": "Kontaktiere uns"
+    "ContactUs": "Kontaktiere uns",
+    "FullName": "Vollständige Name",
+    "PhoneNumber": "Telefonnummer",
+    "subject": "Thema",
+    "message": "Ihr Nachricht",
+    "location": "Standort",
+    "acceptPrivacy": "Ich akzeptiere die Datenschutzrichtlinien",
+    "important": "wichtig",
+    "submit": "Absenden",
+    "customersSays": "Was Kunden sagen",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "Cookies": "Kekse"
   }
 }

@@ -11,6 +11,7 @@ import { Route, Routes } from 'react-router-dom';
 import ServiceDetail from '@components/Services/ServiceDetail';
 import React from 'react';
 import SideMenu from '@components/SideMenu';
+import Cookies from '@components/Cookies';
 
 function App() {
   const [showMenu, setShowMenu] = React.useState<boolean>(false);
@@ -28,6 +29,7 @@ function App() {
       <NavBar menuValue={showMenu} setShowMenu={setShowMenu} />
       <SideMenu menuValue={showMenu} setShowMenu={setShowMenu} />
 
+      {/* <Cookies /> */}
       <Routes>
         <Route
           path="/"

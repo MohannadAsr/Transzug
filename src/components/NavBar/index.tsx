@@ -48,7 +48,8 @@ function NavBar(props: propsType) {
             );
           })}
         </div>
-        <LangSwitcher />
+        <div></div>
+        {/* <LangSwitcher /> */}
         <div
           className="md:hidden block"
           onClick={() => {

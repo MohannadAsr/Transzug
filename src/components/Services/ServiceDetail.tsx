@@ -4,10 +4,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 import arrowLeft from '@iconify-icons/mdi/arrow-left-bold-box';
 import arrowRight from '@iconify-icons/mdi/arrow-right-bold-box';
 import { animate, motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { servicesDetails } from '.';
 
 function ServiceDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const goTo = (dir: 'next' | 'prev') => {
     if (dir == 'next' && Number(id) < 6) {
@@ -30,11 +33,11 @@ function ServiceDetail() {
       }}
     >
       <h1 className=" text-center  font-bold text-xl md:text-3xl z-20  relative">
-        We provide expert removals services
+        {t('Services')}
       </h1>
-      <h3 className="text-center  text-md md:text-xl py-1 z-20  relative">
+      {/* <h3 className="text-center  text-md md:text-xl py-1 z-20  relative">
         Here are just some of the services we can offer
-      </h3>
+      </h3> */}
       <div className="z-20  relative  w-full rounded-md px-3   md:w-3/4 mx-auto my-1  flex items-center justify-between">
         <Icon
           icon={arrowLeft}
@@ -63,32 +66,19 @@ function ServiceDetail() {
               transition={{ duration: 0.5 }}
               className=" text-2xl font-bold"
             >
-              Expert house removal services
+              {servicesDetails[Number(id) - 1]?.title}
             </motion.h1>
             <motion.article
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className=" my-6"
+              className=" my-6 flex flex-col gap-3"
             >
-              Let <span className=" font-bold"> Transzug </span> remove the
-              stress, time and cost from finding reliable home removals
-              services.
-              <div className=" my-3">
-                We'll make your move as easy as possible with a dedicated move
-                co-ordinator who will take care of the whole process. It all
-                begins with an instant free quote and free basic compensation
-                cover up to £50k for fire & theft (in accordance with our
-                Ts&Cs). We pride ourselves on offering an efficient, effective
-                and affordable service. Whether you're moving to a new flat or a
-                country manor, our team of Removal Partners are trained and
-                equipped to handle your requirements.
-              </div>
-              <div className=" my-3">
-                We've earned a 5 star rating from more than 100,000 happy house
-                removals and we can't wait to give you the same satisfaction.
-                Whatever and wherever you're moving, Transzug are here to help.
-              </div>
+              {servicesDetails[Number(id) - 1]?.descriptions?.map(
+                (item, index) => {
+                  return item;
+                }
+              )}
             </motion.article>
           </div>
           <motion.div

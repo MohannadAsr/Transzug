@@ -24,7 +24,8 @@
   }
 }
 
-input {
+input,
+textarea {
   @apply bg-secondary/60 px-2 py-4 rounded-md text-white border-none outline-none placeholder:text-white/60 hover:bg-secondary focus:bg-secondary transition-all;
 }
 

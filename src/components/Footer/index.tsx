@@ -4,8 +4,12 @@ import snapchat from '@iconify-icons/mdi/snapchat';
 import facebook from '@iconify-icons/mdi/facebook';
 
 import instagram from '@iconify-icons/mdi/instagram';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <div className=" bg-primary text-white">
       <div className=" container pt-10 pb-3">
@@ -32,18 +36,30 @@ function Footer() {
           <div className=" col-span-4 break-words md:col-span-3 px-2 mx-auto">
             <h5 className=" font-bold">Links</h5>
             <div className=" footer-links flex flex-col my-4  gap-5 text-white/60">
-              <a className=" underline">Home</a>
-              <a className=" underline">Services</a>
-              <a className=" underline">About us</a>
-              <a className=" underline">Contact</a>
+              <Link to={'/'} className=" underline">
+                {t('Home')}
+              </Link>
+              <Link to={'/services'} className=" underline">
+                {t('Services')}
+              </Link>
+              <Link to={'/portfolio'} className=" underline">
+                {t('Portfolio')}
+              </Link>
+              <Link to={'/about'} className=" underline">
+                {t('AboutUs')}
+              </Link>
             </div>
           </div>
           <div className=" col-span-3 break-words md:col-span-3 px-2 mx-auto">
-            <h5 className="  font-bold">Important</h5>
+            <h5 className="  font-bold">{t('important')}</h5>
             <div className=" footer-links flex flex-col  my-4 gap-5 text-white/60">
-              <a className=" underline">Privacy policy</a>
-              <a className=" underline">imprison</a>
-              <a className=" underline">Cookies</a>
+              <a className=" underline" href="datenschutzerkla.pdf">
+                {t('privacyPolicy')}
+              </a>
+              <a href="/impressum.pdf" className=" underline">
+                imprison
+              </a>
+              {/* <a className=" underline">Cookies</a> */}
             </div>
           </div>
           <div className=" col-span-5 break-words md:col-span-2 px-1 mx-auto">
